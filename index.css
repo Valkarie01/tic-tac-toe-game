@@ -1,41 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    text-align: center;
-    
+    color: black;
+    font-family: 'Shadows Into Light', cursive;
 }
 h1 {
-
+    font-size: 60px;
+    text-transform: uppercase;
 }
-.container {
+.contain {
+    padding: 40px;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: max-content;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg,#e66465, #9198e5);
 }
 
 .theBoard {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
+    display: flex;
+    width: 450px;
+    flex-wrap: wrap;
+    margin-top: 40px;
     align-content: center;
 }
-.box {
+.cell {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     justify-content: center;
     align-items: center;
-    border: solid black;
-    padding: 6px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    font-size: 120px;
+    color: black;
+    cursor: pointer;
 }
 
-#reset {
-    position: relative;
-    top: 60px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10em;
-    height: max-content;
+.cell:nth-child(3n) {
+    border-right: none;
+}
+.cell:nth-child(6) ~ .cell {
+    border-bottom: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border-color: black;
+    font-size: 18px;
+    transition:  200ms transform;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+#playerText {
+    font-family: 'Shadows Into Light', cursive;
+    color: black;
+    font-size: 40px;
+    margin-bottom: -10px;
 }
