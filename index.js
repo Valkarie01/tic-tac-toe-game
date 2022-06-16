@@ -83,7 +83,7 @@ function checkWinner() {
 function resetGame() {
     currentPlayer = 'X'
     options = ['', '', '', '', '', '', '', '', '']
-    playerText.textContent = `Players ${currentPlayer}'s turn`
+    playerText.textContent = `Player ${currentPlayer}'s turn`
     tiles.forEach(cell => cell.textContent = '')
     running = true
 }
